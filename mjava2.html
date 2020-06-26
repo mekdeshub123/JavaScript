@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h2>A Message You Would like to Pass</h2>
+        <label for="pass">Message</label>
+        <input v-model="pass" id="pass">
+        <P>Last Message Delivered{{ Pass }}</P>
+        <button v-on:click="addMessage">Submit</button>
+    </div>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                pass: "",
+            },
+        })
+    </script>
+
+    </body>

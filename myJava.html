@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <h2>A Message You Would like to Pass</h2>
+        <label for="pass">Message</label>
+        <input v-model="pass" id="pass">
+        <P>{{message}}</P>        
+        <button v-on:click="addMessage">Submit</button>
+        <P>Last Message Delivered{{ Pass }}</P>
+    </div>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                pass: "",
+            },
+            methods: {
+                addMessage: function() {
+                    this.message = this.message
+                }
+            }
+        })
+    </script>
+        
+</body>
+</html>
